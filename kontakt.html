@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Sarina&family=Sofia&display=swap" rel="stylesheet"></head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">BEAUTY GLOW</a>
+  <a href="index.html">O NAS</a>
+  <div class="dropdown">
+    <button class="dropbtn">OFERTA 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="makijaz.html">MAKIJAZ</a>
+      <a href="brwi.html">BRWI</a>
+      <a href="rzesy.html">RZESY</a>
+    </div>
+  </div> 
+  <a href="kontakt.html">KONTAKT</a>
+  <a href="https://www.instagram.com/anczix_brows.and.lashes/">UMOW SIE NA WIZYTE</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</div>
+
+<div class="kontakt-container">
+    <div class="pytania_odpowiedzi">
+    <div class="kontakt-content">
+        <h1>Kontakt</h1>
+        <p>Adres: Łapczyca, 32-744 Łapczyca</p>
+        <p>Email: <a href="mailto:twojemail@example.com">twojemail@example.com</a></p>
+      <p>Telefon: <a href="tel:+48575747163">+48 575 747 163</a></p>
+    
+        
+        <div class="iconki">
+        <a href="https://www.facebook.com/twojastrona" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/twojastrona" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.twitter.com/twojastrona" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+</div>
+    
+</div>
+</div>
+
+
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h5>Kontakt</h5>
+        <p>Email: <a href="mailto:aniaczaja02@gmail.com">aniaczaja02@gmail.com</a></p>
+        <p>Telefon: <a href="tel:+48575747163">+48 575 747 163</a></p>
+      </div>
+      <div class="footer-section">
+        <h5>Adres</h5>
+        <p>Łapczyca, 32-744 Łapczyca</p>
+      </div>
+      <div class="footer-section">
+        <h5>Usługi</h5>
+        <ul>
+          <li><a href="makijaz.html">Makijaż</a></li>
+          <li><a href="brwi.html">Stylizacja brwi</a></li>
+          <li><a href="rzesy.html">Przedłużanie rzęs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h5>Śledź nas</h5>
+        <a href="https://www.facebook.com/BeautyGlow.AC" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/anczix_brows.and.lashes/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Beauty Glow. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+const images = [
+    'url("z5.png")',
+    'url("z6.png")',
+    'url("z7.png")',
+    'url("z3.png")'
+];
+
+let currentIndex = 0;
+
+function changeImage() {
+    document.getElementById('slide1').style.backgroundImage = images[(currentIndex + 1) % images.length];
+    document.getElementById('slide2').style.backgroundImage = images[currentIndex];
+    document.getElementById('slide3').style.backgroundImage = images[(currentIndex + 2) % images.length];
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
+setInterval(changeImage, 3000);
+
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+
+</script>
+
+</body>
+</html>

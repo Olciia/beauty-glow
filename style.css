@@ -1,0 +1,577 @@
+body{margin:0;
+  font-family:Poppines}
+.content{
+  margin: 0;
+  width: 100%;
+  }
+
+.topnav {
+  overflow: hidden;
+  
+}
+#pink{
+  color: #ff8fb1;
+  font-family: poppines;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #3c3c3c;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  color: rgba(255, 255, 255, 0);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: rgb(30, 30, 30);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f900;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(110, 110, 110, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }}
+
+
+
+
+
+
+.content--main_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+background: #ddd;
+}
+.content--main_page{
+  background-image: url('marmur.png');
+
+  width: 100%;
+  background-position: center;
+}
+
+h1, h2 {
+    color: #222;
+    margin: 0 0 20px 0;
+    font-size: 2.5em;
+    animation: fadeIn 2s;
+}
+
+p {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeIn 2.5s;
+}
+
+
+
+/* Animacja tekstowa */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translatey(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .cta-button {
+        padding: 8px 16px;
+    }
+    .content--main_page{
+      width: 100%;
+    }
+}
+
+
+.content--onas, .content--onas1 {
+  display: flex;
+  align-items: flex-start; /* Elementy są wyrównane do góry */
+  justify-content: start;
+  gap: 20px;
+}
+
+.content--onas_zdj {
+  height: 100;
+  flex: 0 1 200px; /* Element nie rośnie, może się zmniejszać, startuje od 200px */
+}
+.content--onas_zdj1 {
+  height: 100;
+  flex: 1 0 200px; /* Element nie rośnie, może się zmniejszać, startuje od 200px */
+}
+
+.content--onas_zdj img {
+  min-width: 80%;
+  min-height: 60%;
+  margin: 30px;
+}
+.content--onas_zdj1 img {
+  min-width: 80%;
+  min-height: 60%;
+  margin: 30px;
+}
+
+.content--onas_text {
+  margin: 40px;
+  flex: 1; /* Tekst zajmuje dostępną przestrzeń */
+  text-align: left;
+}
+.content--onas_text1{
+  margin: 40px;
+  flex: 1; /* Tekst zajmuje dostępną przestrzeń */
+  text-align: right;
+}
+
+/* Media query dla mniejszych ekranów, np. telefonów */
+@media (max-width: 768px) {
+  .content--onas {
+    flex-direction: column; /* Układ staje się pionowy */
+    align-items: center; /* Centruje elementy w pionie */
+  }
+
+  .content--onas_zdj, .content--onas_text {
+    flex: none; /* Anuluje poprzednie ustawienia flex */
+    max-width: 100%; /* Pozwala elementom zajmować pełną szerokość kontenera */
+  }
+
+  .content--onas_text {
+    text-align: center;
+    margin: 40px; /* Centruje tekst na mniejszych ekranach */
+  }
+}
+
+@media (max-width: 1000px) {
+  .content--onas_zdj, img {
+    min-width: 60%;
+    min-height: 60%;
+  }
+  }
+
+
+
+  
+
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-size: cover;
+    transition: background-image 1s ease-in-out;
+}
+
+.slide.large {
+    width: 400px;
+    height: 400px;
+}
+
+.small {
+    opacity: 0.8;
+}
+
+.large {
+    opacity: 1;
+}
+@media (max-width: 768px) {
+  .slide {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-size: cover;
+    transition: background-image 1s ease-in-out;
+}
+  .slide.large {
+    width: 300px;
+    height: 300px;
+}
+.small {
+  opacity: 0.8;
+}
+
+.large {
+  opacity: 3;
+}
+
+}
+
+.content--opinie{
+  width: 100%;
+  height: 100%;
+  margin: 40px 0 40px 0;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(251, 71, 227);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  color: #FF69B4;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Make sure images are centered inside the slide */
+.mySlides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.mySlides img {
+  max-width: 100%; /* Make image responsive */
+  max-height: 100%; /* Make image fit inside the slide */
+  margin: auto; /* Center the image */
+}
+
+
+
+
+
+/* Główny kontener - zaplanuj wizytę */
+.content--umow_sie_na_wizyte {
+  background-color: #ffffff; /* Jasnoszary tło */
+  color: #FFFFFF; /* Biały tekst */
+  padding: 20px;
+text-align: center;}
+
+/* Paragrafy wewnątrz kontenera */
+.content--umow_sie_na_wizyte p {
+  margin: 15px 0; /* Odstępy wokół paragrafów */
+}
+
+/* Linki wewnątrz kontenera */
+.content--umow_sie_na_wizyte a {
+  color: #FF69B4; /* Różowy kolor linków */
+  text-decoration: none; /* Brak podkreślenia */
+  font-weight: bold; /* Pogrubienie tekstu */
+  transition: color 0.3s ease; /* Subtelna animacja koloru */
+}
+
+
+
+/* Efekt najechania na przycisk */
+
+
+
+.site-footer {
+  background-color: #f8f8f8;
+  color: #383838;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-section {
+  margin: 20px;
+}
+
+.footer-section h5 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a, .footer-section ul, .footer-section li {
+  color: #666;
+  text-decoration: none;
+  list-style: none;
+  margin: 5px 0;
+}
+
+.footer-section a {
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #000;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #666;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
+
+#napis, h1{
+  text-align: center;
+  font-family: "Sacramento", cursive;
+}
+
+ .button, button {
+  text-decoration: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ff8fb1;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ff8fb1;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.men{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 30px;
+  padding: 30px;
+}
+
+.tablik{
+  margin: 10px;
+  padding: 10px;
+}
+
+.content--makijaz_zdj{
+  max-width: 500px;
+  max-height: 500px;
+
+}
+.arrow-icon {
+  cursor: pointer;
+}
+.answer {
+  display: none;
+}
+
+.pytania_odpowiedzi {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+
+.pytanie {
+  margin-bottom: 20px;
+}
+
+.pytanie strong {
+  cursor: pointer;
+  display: block;
+}
+
+
+.arrow-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  transition: transform 0.3s;
+}
+
+.tablink{
+  margin: 0 10px 0 10px;
+}
+
+@media (max-width: 764px) {
+  .pytania_odpowiedzi{
+    max-width: 400px;
+  }
+}
+
+li{
+  margin: 15px;
+}
+
+.kontakt-container{
+  color: #222;
+  text-decoration: none;
+}
+
+.kontakt-container a{
+color: #FF69B4;
+text-decoration: none;
+}
